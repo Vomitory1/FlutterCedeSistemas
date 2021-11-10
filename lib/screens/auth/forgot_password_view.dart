@@ -73,31 +73,6 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
               SizedBox(
                 height: getProportionsScreenHeigth(24),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: <Widget>[
-                  SocialButton(
-                    icon: 'assets/icons/google.svg',
-                    onPress: () {
-                      print('google');
-                    },
-                  ),
-                  SocialButton(
-                    icon: 'assets/icons/facebook.svg',
-                    onPress: () {
-                      print('facebook');
-                    },
-                  ),
-                  SocialButton(
-                    icon: 'assets/icons/twitter.svg',
-                    onPress: () {
-                      print('twitter');
-                    },
-                  ),
-                ],
-              ),
               SizedBox(
                 height: getProportionsScreenHeigth(24),
               ),

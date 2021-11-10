@@ -38,6 +38,12 @@ class _LoginViewState extends State<LoginView> {
     navigator.push(route: SignUpView.route, key: navigator.authNavigatorKey);
   }
 
+  void navigateToForgotPassword() {
+    navigator.push(
+        route: ForgotPasswordView.route,
+        key: navigator.forgotPasswordNavigatorKey);
+  }
+
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -114,10 +120,7 @@ class _LoginViewState extends State<LoginView> {
                     ],
                   ),
                   InkWell(
-                    onTap: () {
-                      authBLoC
-                          .add(RecoveryPassword(email: emailController.text));
-                    },
+                    onTap: navigateToForgotPassword,
                     child: Text(
                       'Forgot Password',
                       style: TextStyle(decoration: TextDecoration.underline),

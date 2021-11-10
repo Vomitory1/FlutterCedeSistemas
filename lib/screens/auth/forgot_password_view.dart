@@ -12,6 +12,8 @@ class _ForgotPasswordViewState extends State<ForgotPasswordView> {
 
   String? emailError;
 
+  bool get disableButton => emailController.text.isEmpty;
+
   void onValidateEmail(String email) {
     RegExp regex = RegExp(
         r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");

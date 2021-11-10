@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttergram/helpers/navigator.dart';
 import 'package:fluttergram/locator.dart';
 import 'package:fluttergram/repository/auth_repository.dart';
+import 'package:fluttergram/screens/auth/auth_view.dart';
 import 'package:fluttergram/screens/home/home_view.dart';
 
 part './auth_state.dart';
@@ -45,6 +46,17 @@ class AuthBLoC extends Bloc<AuthEvent, AuthState> {
       User? user = await repository.register(email: email, password: password);
       yield AuthState(user: user);
       navigator.replace(route: HomeView.route);
+    } catch (e) {
+      yield AuthState(error: e.toString());
+    }
+  }
+
+  Stream<AuthState> _mapForgotPasswordToState(
+      {required String email}) async* {
+    try {
+      await repository.restorePassword(email: email);
+      
+      navigator.push(route: LoginView.route)
     } catch (e) {
       yield AuthState(error: e.toString());
     }

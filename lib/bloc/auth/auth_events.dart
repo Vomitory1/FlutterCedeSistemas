@@ -16,3 +16,9 @@ class SignUp extends AuthEvent {
 
   SignUp({required this.email, required this.password});
 }
+
+class RecoveryPassword extends AuthEvent {
+  final String email;
+
+  RecoveryPassword({required this.email});
+}

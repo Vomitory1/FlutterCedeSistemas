@@ -82,6 +82,45 @@ class AuthRepository {
     }
   }
 
+  Future<String?> forgotPassword({required String email}) async {
+    String? error;
+    try {
+      await firebaseAuth?.sendPasswordResetEmail(email: email);
+      return "email sent";
+    } on FirebaseException catch (e) {
+      debugPrint('error from recovery password ${e.toString()}');
+      switch (e.code) {
+        case ErrorCodes.ERROR_C0DE_NETWORK_ERROR:
+          error = ErrorMessages.ERROR_C0DE_NETWORK_ERROR;
+          break;
+        case ErrorCodes.ERROR_TOO_MANY_REQUESTS:
+          error = ErrorMessages.ERROR_TOO_MANY_REQUESTS;
+          break;
+        case ErrorCodes.ERROR_USER_NOT_FOUND:
+          error = ErrorMessages.ERROR_USER_NOT_FOUND;
+          break;
+        case ErrorCodes.ERROR_CODE_WRONG_PASSWORD:
+          error = ErrorMessages.ERROR_CODE_WRONG_PASSWORD;
+          break;
+        case ErrorCodes.ERROR_INVALID_EMAIL:
+          error = ErrorMessages.ERROR_INVALID_EMAIL;
+          break;
+        case ErrorCodes.ERROR_CODE_USER_DISABLED:
+          error = ErrorMessages.ERROR_CODE_USER_DISABLED;
+          break;
+        case ErrorCodes.ERROR_CODE_USER_DISABLED:
+          error = ErrorMessages.ERROR_CODE_USER_DISABLED;
+          break;
+        case ErrorCodes.ERROR_OPERATION_NOT_ALLOWED:
+          error = ErrorMessages.ERROR_OPERATION_NOT_ALLOWED;
+          break;
+        default:
+          error = ErrorMessages.DEFAULT;
+      }
+      throw Exception(error);
+    }
+  }
+
   Future<void> loggout() async {
     await firebaseAuth?.signOut();
   }

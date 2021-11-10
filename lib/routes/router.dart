@@ -19,6 +19,10 @@ class UIRouter {
       HomeView.route: MaterialPageRoute<dynamic>(
         settings: RouteSettings(name: settings.name),
         builder: (_) => HomeView(),
+      ),
+      ForgotPasswordView.route: MaterialPageRoute<dynamic>(
+        settings: RouteSettings(name: settings.name),
+        builder: (_) => AuthView(),
       )
     };
 

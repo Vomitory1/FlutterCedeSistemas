@@ -115,13 +115,12 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   InkWell(
                     onTap: () {
-                      print('tap on link');
+                      authBLoC
+                          .add(RecoveryPassword(email: emailController.text));
                     },
                     child: Text(
                       'Forgot Password',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                      ),
+                      style: TextStyle(decoration: TextDecoration.underline),
                     ),
                   )
                 ],

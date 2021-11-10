@@ -1,12 +1,12 @@
 part of app.auth;
 
 class ForgotPasswordView extends StatefulWidget {
-  static String route = '${ForgotPasswordView.route}/signup';
+  static String route = '${AuthView.route}/forgotpassword';
 
   _ForgotPasswordViewState createState() => _ForgotPasswordViewState();
 }
 
-class _ForgotPasswordViewState extends State<SignUpView> {
+class _ForgotPasswordViewState extends State<ForgotPasswordView> {
   final NavigatorService navigator = locator<NavigatorService>();
   TextEditingController emailController = TextEditingController();
 
@@ -28,7 +28,7 @@ class _ForgotPasswordViewState extends State<SignUpView> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Register',
+          'Forgot Password',
           style: TextStyle(
               fontSize: getProportionsScreenHeigth(14), color: secondaryColor),
         ),
@@ -44,19 +44,6 @@ class _ForgotPasswordViewState extends State<SignUpView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: <Widget>[
-              Text(
-                'Register Account',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: getProportionsScreenHeigth(28),
-                ),
-              ),
-              Text(
-                'Complete your details or continue\nwith social media',
-                textAlign: TextAlign.center,
-              ),
               SizedBox(
                 height: SizeConfig.screenHeight! * 0.05,
               ),
@@ -78,7 +65,7 @@ class _ForgotPasswordViewState extends State<SignUpView> {
                 height: getProportionsScreenHeigth(24),
               ),
               Button(
-                label: 'Sing In',
+                label: 'Recovery Password',
                 onPress: () {
                   authBLoC.add(RecoveryPassword(email: emailController.text));
                 },

@@ -51,12 +51,11 @@ class AuthBLoC extends Bloc<AuthEvent, AuthState> {
     }
   }
 
-  Stream<AuthState> _mapForgotPasswordToState(
-      {required String email}) async* {
+  Stream<AuthState> _mapForgotPasswordToState({required String email}) async* {
     try {
       await repository.restorePassword(email: email);
-      
-      navigator.push(route: LoginView.route)
+
+      navigator.push(route: LoginView.route);
     } catch (e) {
       yield AuthState(error: e.toString());
     }

@@ -1,40 +1,40 @@
 {
   "project_info": {
-    "project_number": "664165849347",
-    "project_id": "fluttergram-a8c36",
-    "storage_bucket": "fluttergram-a8c36.appspot.com"
+    "project_number": "1054710852869",
+    "project_id": "my-project-cbfbe",
+    "storage_bucket": "my-project-cbfbe.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:664165849347:android:bf4a16dcce9f03f4827136",
+        "mobilesdk_app_id": "1:1054710852869:android:af51eec8585f325e071b6c",
         "android_client_info": {
-          "package_name": "co.codeo.fluttergram"
+          "package_name": "com.example.fluttergram"
         }
       },
       "oauth_client": [
         {
-          "client_id": "664165849347-1k6hg7vf4cb0jhm13p2o1klgfdv2jjj9.apps.googleusercontent.com",
+          "client_id": "1054710852869-l980uqua70fmq2l51gqgvsht330c0h1h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC6MQBHKEeiNOEeuBHLN2Znhb3wKIsUc34"
+          "current_key": "AIzaSyB_5XRcTxuhlwqb9SGkxxXOOS6oAv7DBw0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "664165849347-1k6hg7vf4cb0jhm13p2o1klgfdv2jjj9.apps.googleusercontent.com",
+              "client_id": "1054710852869-l980uqua70fmq2l51gqgvsht330c0h1h.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "664165849347-spmjpsrd250j218eu40h1j26lv440cid.apps.googleusercontent.com",
+              "client_id": "1054710852869-9lakir0gk2j5sohqd9t1i29lo1c926ml.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "co.codeo.fluttergram"
+                "bundle_id": "com.example.fluttergram"
               }
             }
           ]

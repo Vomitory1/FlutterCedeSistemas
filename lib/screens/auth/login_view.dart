@@ -36,12 +36,16 @@ class _LoginViewState extends State<LoginView> {
 
   void navigateToSignUp() {
     navigator.push(route: SignUpView.route, key: navigator.authNavigatorKey);
+    print(navigator.authNavigatorKey);
+    print(SignUpView.route);
   }
 
   void navigateToForgotPassword() {
     navigator.push(
         route: ForgotPasswordView.route,
         key: navigator.forgotPasswordNavigatorKey);
+    print(navigator.forgotPasswordNavigatorKey);
+    print(ForgotPasswordView.route);
   }
 
   @override

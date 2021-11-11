@@ -7,6 +7,9 @@ class NavigatorService {
   final GlobalKey<NavigatorState> authNavigatorKey =
       new GlobalKey<NavigatorState>();
 
+  final GlobalKey<NavigatorState> forgotPasswordNavigatorKey =
+      new GlobalKey<NavigatorState>();
+
   final GlobalKey<NavigatorState> homeNavigatorKey =
       new GlobalKey<NavigatorState>();
 

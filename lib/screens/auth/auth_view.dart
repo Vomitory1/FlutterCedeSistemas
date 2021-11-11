@@ -19,6 +19,7 @@ import 'package:fluttergram/repository/auth_repository.dart';
 
 part 'login_view.dart';
 part 'sign_up_view.dart';
+part 'forgot_password_view.dart';
 
 class AuthView extends StatelessWidget {
   static String route = '/auth';
@@ -43,6 +44,10 @@ Route<dynamic>? autheticationRouteStack(RouteSettings settings) {
     LoginView.route: MaterialPageRoute<dynamic>(
       settings: RouteSettings(name: settings.name),
       builder: (_) => LoginView(),
+    ),
+    ForgotPasswordView.route: MaterialPageRoute<dynamic>(
+      settings: RouteSettings(name: settings.name),
+      builder: (_) => ForgotPasswordView(),
     ),
   };
   return appRouting[settings.name];

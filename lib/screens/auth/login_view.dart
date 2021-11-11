@@ -36,6 +36,16 @@ class _LoginViewState extends State<LoginView> {
 
   void navigateToSignUp() {
     navigator.push(route: SignUpView.route, key: navigator.authNavigatorKey);
+    print(navigator.authNavigatorKey);
+    print(SignUpView.route);
+  }
+
+  void navigateToForgotPassword() {
+    navigator.push(
+        route: ForgotPasswordView.route,
+        key: navigator.forgotPasswordNavigatorKey);
+    print(navigator.forgotPasswordNavigatorKey);
+    print(ForgotPasswordView.route);
   }
 
   @override
@@ -114,14 +124,10 @@ class _LoginViewState extends State<LoginView> {
                     ],
                   ),
                   InkWell(
-                    onTap: () {
-                      print('tap on link');
-                    },
+                    onTap: navigateToForgotPassword,
                     child: Text(
                       'Forgot Password',
-                      style: TextStyle(
-                        decoration: TextDecoration.underline,
-                      ),
+                      style: TextStyle(decoration: TextDecoration.underline),
                     ),
                   )
                 ],

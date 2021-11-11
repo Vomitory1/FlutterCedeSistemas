@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>co.codeo.fluttergram</string>
+	<string>com.example.fluttergram</string>
 	<key>PROJECT_ID</key>
 	<string>fluttergram-a8c36</string>
 	<key>STORAGE_BUCKET</key>
